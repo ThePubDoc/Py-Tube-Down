@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <strong>Tİtle:</strong> {{ title }}
+    <br>
+    <strong>Description:</strong> {{ desc }}
+    <br>
+    <strong>Uploaded By:</strong> {{ author }}
+    <br>
+
+    <strong>Thumbnail</strong>  <img src={{ img }}  height="500" width="500">
+    <br />
+    {% for st_url,st_res,st_ext,st_size in li_do %}
+    <strong>Download:</strong> <a href="{{ st_url }}">Download({{ st_res }}) - {{ st_ext }} - {{ st_size/(1024*1024) }}MB</a>
+    <br /> {% endfor %}
+
+</body>
+</html>
